@@ -1,0 +1,26 @@
+<button class="btn btn-dark bg-gradient my-2" routerLink="/add">Aggiungi</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Edit your list</th>
+      </tr>
+    </thead>
+    <tbody>                   <!-- BOOTSTRAP PAGINATION: slice ............. nel ciclo ngfor -->
+      <tr *ngFor="let user of myService.users | slice: (page-1) * pageSize : page * pageSize">
+        <th scope="row">{{user.id}}</th>
+        <td>{{user.name}} </td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td> 
+            <a class="btn btn-dark mx-2 bg-gradient" style="width: 40%;" routerLink="/edit/{{user.id}}">Edit</a>
+            <a class="btn btn-dark bg-gradient"  style="width: 40%;"  routerLink="/delete/{{user.id}}">Delete</a>
+        </td> 
+      </tr>
+    </tbody>
+</table>
+<!-- BOOTSTRAP PAGINATION ---- bottoni  -->
+<ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]=" myService.users.length"></ngb-pagination>

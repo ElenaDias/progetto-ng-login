@@ -1,0 +1,16 @@
+<form class="m-3" *ngIf="user"> 
+    <label>#ID</label> <br>
+    <input type="number" name="id" class="form-control" [(ngModel)]="user.id" disabled> 
+    <br>
+    <label>Name</label>
+    <br>
+    <input type="text" name="name" class="form-control" [(ngModel)]="user.name"> 
+    <br>
+    <label>Username</label><br>
+    <input type="text" name="username" class="form-control" [(ngModel)]="user.username"> 
+    <br>
+    <label>Email</label><br>
+    <input type="email" name="email" class="form-control" [(ngModel)]="user.email"> 
+    <br>
+    <button class="btn btn-dark bg-gradient" (click)="save(user)"> Save </button>
+</form>

@@ -1,0 +1,14 @@
+<label>#ID</label> 
+<br>
+<input type="number" name="id" class="form-control" [(ngModel)]="newUser.id" disabled>
+<label>Name</label>
+<br>
+<input type="text" name="name" class="form-control" [(ngModel)]="newUser.name"> 
+<br>
+<label>Username</label><br>
+<input type="text" name="username" class="form-control" [(ngModel)]="newUser.username"> 
+<br>
+<label>Email</label><br>
+<input type="email" name="email" class="form-control" [(ngModel)]="newUser.email"> 
+<br>
+<button  class="btn btn-dark bg-gradient my-2" (click)="add()">Add</button>

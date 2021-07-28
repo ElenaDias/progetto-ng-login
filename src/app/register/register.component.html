@@ -1,0 +1,8 @@
+<h2> Register Account</h2>
+<!-- <label>ID </label><br>
+<input type="number" class="form-control"  style="width:40%" disabled><br> -->
+<label>Name </label><br>
+<input type="text" class="form-control"  style="width:40%" [(ngModel)]="nuovoUser.name"><br>
+<label>Password </label><br>
+<input type="text" class="form-control"  style="width:40%" [(ngModel)]="nuovoUser.password"><br>
+<button class="btn btn-dark bg-gradient" (click)="register()">Register</button>
